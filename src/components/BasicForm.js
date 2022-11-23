@@ -8,7 +8,7 @@ const BasicForm = (props) => {
         </div>
         <div className='form-control'>
           <label htmlFor='name'>Last Name</label>
-          <input type='text' id='name' />
+          <input type='text' id='name'/>
         </div>
       </div>
       <div className='form-control'>
