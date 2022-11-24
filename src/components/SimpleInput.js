@@ -19,11 +19,11 @@ const SimpleInput = (props) => {
   valueChangeHandler:emailChangeHandler,
   inputBlurHandler:emailBlurHandler,
   reset:emailReset
- } =  useInput(value =>  value.includes('@'));
+ } =  useInput(emailValue =>  emailValue.includes('@'));
 
 
- const nameInputClassess = !hasError ? "form-control" : "form-control invalid";
- const InputClassess = !error ? "form-control" : "form-control invalid";
+  const nameInputClassess = !hasError ? "form-control" : "form-control invalid";
+  const InputClassess = !error ? "form-control" : "form-control invalid";
 
   let formIsValid = false;
   
@@ -39,7 +39,7 @@ const SimpleInput = (props) => {
     e.preventDefault();
 
 
-    if(!valueIsValid && !emailIsValid){
+    if(!formIsValid){
       return
     }
 
